@@ -30,15 +30,38 @@
             android:layout_gravity="center" />
     </androidx.appcompat.widget.Toolbar>
 
+    <!-- Center button that triggers functionality (e.g., Toast) -->
     <Button
         android:id="@+id/center_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add Functionality Later"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_centerInParent="true" />
+
+    <!-- Button to open DatePicker -->
+    <Button
+        android:id="@+id/date_picker_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open Date Picker"
+        app:layout_constraintTop_toBottomOf="@id/center_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- TextView to display the selected date -->
+    <TextView
+        android:id="@+id/date_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selected Date: None"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/date_picker_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
