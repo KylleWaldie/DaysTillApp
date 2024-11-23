@@ -108,7 +108,7 @@ class WidgetProvider : AppWidgetProvider() {
     }
 
     private fun userInputDate() {
-
+        TODO("Add grabbing data from app to compare to current date")
     }
 
     /**
@@ -156,16 +156,5 @@ class WidgetProvider : AppWidgetProvider() {
             context.applicationContext.unregisterReceiver(timeTickReceiver)
             timeTickReceiver = null
         }
-    }
-
-    /**
-     * Retrieves the current day of the week as a formatted string.
-     * (Currently unused but could be helpful for future features.)
-     */
-    @RequiresApi(Build.VERSION_CODES.O)
-    private fun getCurrentDay(): String {
-        val currentDay = LocalDate.now()
-        val dayOfWeek = currentDay.dayOfWeek
-        return dayOfWeek.getDisplayName(TextStyle.FULL, Locale.getDefault())
     }
 }
